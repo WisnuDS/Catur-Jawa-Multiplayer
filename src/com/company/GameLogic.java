@@ -2,7 +2,7 @@ package com.company;
 
 public class GameLogic {
     private Papan papan;
-    private boolean isFinised;
+    private boolean isFinished;
     private Gaco.Player winner;
     private Gaco.Player currentPlayer;
 
@@ -22,17 +22,17 @@ public class GameLogic {
         this.winner = winner;
     }
 
-    public boolean isFinised() {
-        return isFinised;
+    public boolean isFinished() {
+        return isFinished;
     }
 
-    public void setFinised(boolean finised) {
-        isFinised = finised;
+    public void setFinished(boolean finished) {
+        isFinished = finished;
     }
 
     public GameLogic() {
         papan = new Papan();
-        this.isFinised = false;
+        this.isFinished = false;
         this.winner = null;
     }
 
@@ -58,13 +58,13 @@ public class GameLogic {
             if (papan.getUbins()[0][0].getGaco().getPlayer() == Gaco.Player.SATU
                     && papan.getUbins()[1][1].getGaco().getPlayer() == Gaco.Player.SATU
                     && papan.getUbins()[2][2].getGaco().getPlayer() == Gaco.Player.SATU) {
-                setFinised(true);
+                setFinished(true);
                 setWinner(Gaco.Player.SATU);
                 return true;
             }else if (papan.getUbins()[0][0].getGaco().getPlayer() == Gaco.Player.DUA
                     && papan.getUbins()[1][1].getGaco().getPlayer() == Gaco.Player.DUA
                     && papan.getUbins()[2][2].getGaco().getPlayer() == Gaco.Player.DUA) {
-                setFinised(true);
+                setFinished(true);
                 setWinner(Gaco.Player.DUA);
                 return true;
             }
@@ -72,13 +72,13 @@ public class GameLogic {
             if ((papan.getUbins()[0][2].getGaco().getPlayer() == Gaco.Player.SATU)
                     && (papan.getUbins()[1][1].getGaco().getPlayer() == Gaco.Player.SATU)
                     && (papan.getUbins()[2][0].getGaco().getPlayer() == Gaco.Player.SATU)) {
-                setFinised(true);
+                setFinished(true);
                 setWinner(Gaco.Player.SATU);
                 return true;
             }else if (papan.getUbins()[0][2].getGaco().getPlayer() == Gaco.Player.DUA
                     && papan.getUbins()[1][1].getGaco().getPlayer() == Gaco.Player.DUA
                     && papan.getUbins()[2][0].getGaco().getPlayer() == Gaco.Player.DUA) {
-                setFinised(true);
+                setFinished(true);
                 setWinner(Gaco.Player.DUA);
                 return true;
             }
@@ -88,13 +88,13 @@ public class GameLogic {
                     if (papan.getUbins()[i][0].getGaco().getPlayer() == Gaco.Player.SATU
                             && papan.getUbins()[i][1].getGaco().getPlayer() == Gaco.Player.SATU
                             && papan.getUbins()[i][2].getGaco().getPlayer() == Gaco.Player.SATU) {
-                        setFinised(true);
+                        setFinished(true);
                         setWinner(Gaco.Player.SATU);
                         return true;
                     }else if (papan.getUbins()[i][0].getGaco().getPlayer() == Gaco.Player.DUA
                             && papan.getUbins()[i][1].getGaco().getPlayer() == Gaco.Player.DUA
                             && papan.getUbins()[i][2].getGaco().getPlayer() == Gaco.Player.DUA) {
-                        setFinised(true);
+                        setFinished(true);
                         setWinner(Gaco.Player.DUA);
                         return true;
                     }
@@ -102,13 +102,13 @@ public class GameLogic {
                     if (papan.getUbins()[0][i].getGaco().getPlayer() == Gaco.Player.SATU
                             && papan.getUbins()[1][i].getGaco().getPlayer() == Gaco.Player.SATU
                             && papan.getUbins()[2][i].getGaco().getPlayer() == Gaco.Player.SATU) {
-                        setFinised(true);
+                        setFinished(true);
                         setWinner(Gaco.Player.SATU);
                         return true;
                     }else if (papan.getUbins()[0][i].getGaco().getPlayer() == Gaco.Player.DUA
                             && papan.getUbins()[1][i].getGaco().getPlayer() == Gaco.Player.DUA
                             && papan.getUbins()[2][i].getGaco().getPlayer() == Gaco.Player.DUA) {
-                        setFinised(true);
+                        setFinished(true);
                         setWinner(Gaco.Player.DUA);
                         return true;
                     }
